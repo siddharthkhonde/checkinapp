@@ -3,16 +3,27 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StartcheckinComponent } from './components/startcheckin/startcheckin.component';
+import { CheckinComponent } from './components/checkin/checkin.component';
+import { ConfirmcheckinComponent } from './components/confirmcheckin/confirmcheckin.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StartcheckinComponent,
+    CheckinComponent,
+    ConfirmcheckinComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
